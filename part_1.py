@@ -14,8 +14,8 @@ def eigen_decomposition(matrix):
 
     normalized_eigenvectors = np.zeros_like(eigenvectors)
     for i in range(len(eigenvectors)):
-        norm = np.linalg.norm(eigenvectors[:, i])
-        normalized_eigenvectors[:, i] = eigenvectors[:, i] / norm
+        max_value_index = np.argmax(np.abs(eigenvectors[:, i]))
+        normalized_eigenvectors[:, i] = eigenvectors[:, i] / eigenvectors[max_value_index, i]
 
     return eigenvalues, normalized_eigenvectors
 
