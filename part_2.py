@@ -8,6 +8,7 @@ def show_original():
     original_image = imread("borzyi_piesek.jpg")
     print("The size of the original piesek image(height, width): ", original_image.shape)
     plt.imshow(original_image)
+    plt.title("Original image of borzyi piesek")
     plt.axis("off")
     plt.show()
     return original_image
@@ -18,6 +19,7 @@ def black_n_white(original_image):
     image_bw = image_sum / image_sum.max()
     print("\nThe size of black and white piesek image(height, width): ", image_bw.shape)
     plt.imshow(image_bw, "gray")
+    plt.title("Black and white image of borzyi piesek")
     plt.axis("off")
     plt.show()
     return image_bw
